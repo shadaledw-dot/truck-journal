@@ -1078,9 +1078,10 @@ document.addEventListener('input',function(e){
 renderJobs();renderDivs();calc();
 
 // Register service worker for PWA offline support
+// Uses relative path so it works on GitHub Pages subdirectories
 if('serviceWorker' in navigator) {
   window.addEventListener('load', function() {
-    navigator.serviceWorker.register('/sw.js').catch(function(e) {
+    navigator.serviceWorker.register('./sw.js', {scope: './'}).catch(function(e) {
       console.log('SW registration failed:', e);
     });
   });
