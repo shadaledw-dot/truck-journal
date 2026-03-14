@@ -2,19 +2,20 @@
   "name": "TTM Truck Journal",
   "short_name": "Truck Journal",
   "description": "1-800-GOT-JUNK daily truck journal calculator",
-  "start_url": "/index.html",
+  "start_url": "./index.html",
+  "scope": "./",
   "display": "standalone",
   "background_color": "#1a1a1a",
   "theme_color": "#5BBD2F",
   "orientation": "portrait",
   "icons": [
     {
-      "src": "icon-180.png",
+      "src": "./icon-180.png",
       "sizes": "180x180",
       "type": "image/png"
     },
     {
-      "src": "icon-512.png",
+      "src": "./icon-512.png",
       "sizes": "512x512",
       "type": "image/png",
       "purpose": "any maskable"
