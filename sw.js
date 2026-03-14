@@ -1,9 +1,9 @@
-const CACHE = 'ttm-journal-v1';
+const CACHE = 'ttm-journal-v2';
 const ASSETS = [
-  '/index.html',
-  '/manifest.json',
-  '/icon-180.png',
-  '/icon-512.png',
+  './index.html',
+  './manifest.json',
+  './icon-180.png',
+  './icon-512.png',
   'https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;800;900&family=Barlow:wght@400;500;600&display=swap'
 ];
 
