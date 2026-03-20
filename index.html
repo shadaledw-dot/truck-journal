@@ -594,7 +594,7 @@ var jobs=[], jid=0, dumps=[], did=0, divs=[], vid=0;
 var STORAGE_KEY = 'ttm_journal_v1';
 
 // ─────────────────────────────────────────────
-//  PERSIST: save everything to window.storage
+//  PERSIST: save everything to localStorage
 // ─────────────────────────────────────────────
 var _saveTimer = null;
 function scheduleSave(){
@@ -602,8 +602,7 @@ function scheduleSave(){
   _saveTimer = setTimeout(persistSave, 400);
 }
 
-async function persistSave(){
-  // Collect all text/number/select field values
+function persistSave(){
   var fieldIds = [
     'truckNum','jdate','driverName','navName',
     'driverHrs','navHrs','driverRate','navRate',
@@ -617,57 +616,30 @@ async function persistSave(){
     'statsStartHr','statsStartMin','statsEndHr','statsEndMin'
   ];
   var fields = {};
-  fieldIds.forEach(function(id){
-    var el = document.getElementById(id);
-    if(el) fields[id] = el.value;
-  });
-  selectIds.forEach(function(id){
-    var el = document.getElementById(id);
-    if(el) fields[id] = el.value;
-  });
-
-  var data = {
-    jobs: jobs, jid: jid,
-    dumps: dumps, did: did,
-    divs: divs, vid: vid,
-    fields: fields,
-    savedAt: Date.now()
-  };
-
+  fieldIds.forEach(function(id){ var el=document.getElementById(id); if(el) fields[id]=el.value; });
+  selectIds.forEach(function(id){ var el=document.getElementById(id); if(el) fields[id]=el.value; });
   try {
-    await window.storage.set(STORAGE_KEY, JSON.stringify(data));
-  } catch(e) {
-    console.warn('Storage save failed:', e);
-  }
+    localStorage.setItem(STORAGE_KEY, JSON.stringify({
+      jobs:jobs, jid:jid, dumps:dumps, did:did, divs:divs, vid:vid,
+      fields:fields, savedAt:Date.now()
+    }));
+  } catch(e){ console.warn('Save failed:',e); }
 }
 
 // ─────────────────────────────────────────────
-//  RESTORE: load from window.storage on startup
+//  RESTORE: load from localStorage on startup
 // ─────────────────────────────────────────────
-async function persistLoad(){
+function persistLoad(){
   try {
-    var result = await window.storage.get(STORAGE_KEY);
-    if(!result || !result.value) return false;
-    var data = JSON.parse(result.value);
-
-    // Restore arrays and counters
-    if(data.jobs)  { jobs  = data.jobs;  jid  = data.jid  || 0; }
-    if(data.dumps) { dumps = data.dumps; did  = data.did  || 0; }
-    if(data.divs)  { divs  = data.divs;  vid  = data.vid  || 0; }
-
-    // Restore field values
-    if(data.fields){
-      Object.keys(data.fields).forEach(function(id){
-        var el = document.getElementById(id);
-        if(el) el.value = data.fields[id];
-      });
-    }
-
+    var raw = localStorage.getItem(STORAGE_KEY);
+    if(!raw) return false;
+    var data = JSON.parse(raw);
+    if(data.jobs)  { jobs=data.jobs;   jid=data.jid||0; }
+    if(data.dumps) { dumps=data.dumps; did=data.did||0; }
+    if(data.divs)  { divs=data.divs;   vid=data.vid||0; }
+    if(data.fields){ Object.keys(data.fields).forEach(function(id){ var el=document.getElementById(id); if(el) el.value=data.fields[id]; }); }
     return true;
-  } catch(e) {
-    console.warn('Storage load failed:', e);
-    return false;
-  }
+  } catch(e){ console.warn('Load failed:',e); return false; }
 }
 
 // Trigger save on any relevant input
@@ -694,9 +666,8 @@ document.getElementById('hdt').innerHTML=td.toLocaleDateString('en-US',{weekday:
 })();
 
 // Load saved data, then render
-(async function(){
-  var restored = await persistLoad();
-  // Only set default date if no saved date
+(function(){
+  var restored = persistLoad();
   if(!document.getElementById('jdate').value){
     document.getElementById('jdate').value = td.toISOString().split('T')[0];
   }
@@ -705,7 +676,9 @@ document.getElementById('hdt').innerHTML=td.toLocaleDateString('en-US',{weekday:
   renderDivs();
   calc();
   if(restored && (jobs.length || dumps.length || divs.length)){
-    showToast('📂 Data restored (' + jobs.length + ' job' + (jobs.length!==1?'s':'') + ')');
+    setTimeout(function(){
+      showToast('📂 Data restored (' + jobs.length + ' job' + (jobs.length!==1?'s':'') + ')');
+    }, 300);
   }
 })();
 
