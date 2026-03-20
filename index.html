@@ -27,7 +27,6 @@ html,body{font-family:'Barlow',sans-serif;background:var(--bg);color:var(--tx);m
 .tabs{display:flex;background:var(--sf);border-bottom:2px solid var(--br);position:sticky;top:52px;z-index:200;}
 .tab{flex:1;padding:10px 1px;text-align:center;font-family:'Barlow Condensed',sans-serif;font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:0.3px;color:var(--mt);cursor:pointer;border-bottom:3px solid transparent;transition:all 0.15s;margin-bottom:-2px;}
 .tab.on{color:var(--or);border-bottom-color:var(--or);}
-/* LIVE BAR — 5 cells now (Sales/hr added) */
 .lbar{background:var(--or);display:grid;grid-template-columns:repeat(5,1fr);}
 .lc{padding:8px 0;text-align:center;border-right:1px solid rgba(255,255,255,0.2);}
 .lc:last-child{border-right:none;}
@@ -55,7 +54,6 @@ input[type=number]::-webkit-outer-spin-button,input[type=number]::-webkit-inner-
 .r1{margin-bottom:13px;}
 .apply-btn{width:100%;background:var(--grb);border:1.5px solid var(--or);border-radius:10px;color:var(--or);font-family:'Barlow Condensed',sans-serif;font-size:15px;font-weight:800;text-transform:uppercase;letter-spacing:1px;padding:12px;cursor:pointer;margin-top:8px;transition:all 0.15s;}
 .apply-btn:active{background:rgba(91,189,47,0.3);transform:scale(0.98);}
-/* JOB CARDS */
 .jcard{background:var(--sf);border:1.5px solid var(--br);border-radius:14px;margin-bottom:10px;transition:border-color 0.15s;}
 .jcard:focus-within{border-color:var(--or);box-shadow:0 0 0 3px rgba(91,189,47,0.1);}
 .jch{display:flex;align-items:center;padding:10px 13px;background:var(--ra);border-bottom:1px solid var(--br);gap:8px;border-radius:12px 12px 0 0;}
@@ -70,14 +68,12 @@ input[type=number]::-webkit-outer-spin-button,input[type=number]::-webkit-inner-
 .jtype-btn{flex:1;padding:10px 4px;border-radius:9px;border:1.5px solid var(--br);background:transparent;color:var(--mt);font-family:'Barlow Condensed',sans-serif;font-size:14px;font-weight:800;text-transform:uppercase;cursor:pointer;transition:all 0.15s;text-align:center;}
 .jtype-btn.active-r{border-color:var(--or);background:var(--grb);color:var(--or);}
 .jtype-btn.active-c{border-color:var(--bl);background:rgba(74,158,255,0.1);color:var(--bl);}
-/* JOBS RUNNING TOTAL */
 .jtotal{background:rgba(91,189,47,0.08);border:1px solid rgba(91,189,47,0.25);border-radius:12px;padding:13px 16px;margin-bottom:10px;display:grid;grid-template-columns:1fr 1fr;gap:8px;}
 .jtotal-cell{text-align:center;}
 .jtotal-lbl{font-size:9px;text-transform:uppercase;letter-spacing:1.5px;color:var(--mt);font-weight:700;margin-bottom:3px;}
 .jtotal-val{font-family:'Barlow Condensed',sans-serif;font-size:22px;font-weight:900;}
 .addb{width:100%;background:transparent;border:2px dashed var(--br);border-radius:13px;color:var(--mt);font-family:'Barlow Condensed',sans-serif;font-size:16px;font-weight:800;text-transform:uppercase;letter-spacing:1px;padding:15px;cursor:pointer;transition:all 0.15s;margin-bottom:4px;}
 .addb:active,.addb:hover{background:var(--grb);border-color:var(--or);color:var(--or);}
-/* DUMP CARDS */
 .dcard{background:var(--sf);border:1.5px solid var(--br);border-radius:14px;margin-bottom:10px;overflow:hidden;}
 .dcard:focus-within{border-color:rgba(74,158,255,0.5);}
 .dch2{display:flex;align-items:center;padding:10px 13px;background:var(--ra);border-bottom:1px solid var(--br);gap:8px;}
@@ -85,7 +81,6 @@ input[type=number]::-webkit-outer-spin-button,input[type=number]::-webkit-inner-
 .dsite{flex:1;font-size:13px;color:var(--mt);}
 .dcost{font-family:'Barlow Condensed',sans-serif;font-size:17px;font-weight:700;color:var(--rd);}
 .dcb{padding:13px;}
-/* DIVERSION CARDS */
 .vcard{background:var(--sf);border:1.5px solid rgba(91,189,47,0.35);border-radius:14px;margin-bottom:10px;overflow:hidden;}
 .vch{display:flex;align-items:center;padding:10px 13px;background:rgba(91,189,47,0.07);border-bottom:1px solid rgba(91,189,47,0.2);gap:8px;}
 .vnum{font-family:'Barlow Condensed',sans-serif;font-size:16px;font-weight:900;color:var(--gr);min-width:22px;}
@@ -103,14 +98,12 @@ input[type=number]::-webkit-outer-spin-button,input[type=number]::-webkit-inner-
 .pch{display:flex;align-items:center;padding:10px 14px;background:var(--ra);border-bottom:1px solid var(--br);gap:8px;}
 .pcn{font-family:'Barlow Condensed',sans-serif;font-size:18px;font-weight:800;text-transform:uppercase;letter-spacing:1px;flex:1;}
 .pcb{padding:12px 14px;}
-/* RESULTS HERO — Day Total at top */
 .day-hero{background:linear-gradient(135deg,rgba(91,189,47,0.12),rgba(91,189,47,0.04));border:1.5px solid rgba(91,189,47,0.35);border-radius:14px;padding:16px;margin-bottom:12px;display:grid;grid-template-columns:1fr 1fr;gap:12px;}
 .day-hero-cell{text-align:center;}
 .day-hero-lbl{font-size:9px;text-transform:uppercase;letter-spacing:1.5px;color:var(--mt);font-weight:700;margin-bottom:4px;}
 .day-hero-name{font-family:'Barlow Condensed',sans-serif;font-size:13px;font-weight:800;color:var(--or);text-transform:uppercase;letter-spacing:1px;margin-bottom:2px;}
 .day-hero-val{font-family:'Barlow Condensed',sans-serif;font-size:36px;font-weight:900;color:var(--gr);line-height:1;}
 .day-hero-sub{font-size:11px;color:var(--mt);margin-top:2px;}
-/* PS badge strip */
 .ps-strip{background:rgba(245,200,0,0.07);border:1px solid rgba(245,200,0,0.25);border-radius:10px;padding:10px 14px;margin-bottom:12px;display:flex;align-items:center;justify-content:space-between;}
 .step{background:var(--sf);border:1px solid var(--br);border-radius:12px;padding:14px;margin-bottom:12px;}
 .step-label{font-size:9px;text-transform:uppercase;letter-spacing:2px;color:var(--mt);font-weight:700;margin-bottom:10px;display:flex;align-items:center;gap:6px;}
@@ -158,7 +151,6 @@ hr{border:none;border-top:1px solid var(--br);margin:10px 0;}
   <div class="tab" onclick="gTab(3)">💰 Results</div>
   <div class="tab" onclick="gTab(4)">📈 Stats</div>
 </div>
-<!-- LIVE BAR: 5 cells — Gross, Net, Daily%, Jobs, Sales/hr -->
 <div class="lbar">
   <div class="lc"><div class="ll">Gross Rev</div><div class="lv" id="lG">$0</div></div>
   <div class="lc"><div class="ll">Net Rev</div><div class="lv" id="lN">$0</div></div>
@@ -173,8 +165,8 @@ hr{border:none;border-top:1px solid var(--br);margin:10px 0;}
     <div class="sh" onclick="tog(this)"><span class="si">🚛</span><span class="st">Truck Info</span><span class="chv">v</span></div>
     <div class="sb">
       <div class="r2">
-        <div><label>Truck #</label><input type="text" id="truckNum" placeholder="42" inputmode="numeric"></div>
-        <div><label>Date</label><input type="date" id="jdate"></div>
+        <div><label>Truck #</label><input type="text" id="truckNum" placeholder="42" inputmode="numeric" oninput="saveFields()"></div>
+        <div><label>Date</label><input type="date" id="jdate" onchange="saveFields()"></div>
       </div>
       <div class="r2">
         <div><label>Driver Name</label><input type="text" id="driverName" placeholder="e.g. Doron" oninput="calc()"></div>
@@ -194,12 +186,12 @@ hr{border:none;border-top:1px solid var(--br);margin:10px 0;}
           </div>
           <div style="padding:10px;display:flex;flex-direction:column;gap:8px;">
             <div><label>Start</label><div style="display:grid;grid-template-columns:1fr 1fr;gap:5px;">
-              <select id="dStartHr" onchange="calcPersonTime('d')" style="padding:10px 6px;font-size:14px;text-align:center;"><option value="">Hr</option></select>
-              <select id="dStartMin" onchange="calcPersonTime('d')" style="padding:10px 6px;font-size:14px;text-align:center;"><option value="">Min</option><option>00</option><option>15</option><option>30</option><option>45</option></select>
+              <select id="dStartHr" onchange="calcPersonTime('d');saveSelects()" style="padding:10px 6px;font-size:14px;text-align:center;"><option value="">Hr</option></select>
+              <select id="dStartMin" onchange="calcPersonTime('d');saveSelects()" style="padding:10px 6px;font-size:14px;text-align:center;"><option value="">Min</option><option>00</option><option>15</option><option>30</option><option>45</option></select>
             </div></div>
             <div><label>End</label><div style="display:grid;grid-template-columns:1fr 1fr;gap:5px;">
-              <select id="dEndHr" onchange="calcPersonTime('d')" style="padding:10px 6px;font-size:14px;text-align:center;"><option value="">Hr</option></select>
-              <select id="dEndMin" onchange="calcPersonTime('d')" style="padding:10px 6px;font-size:14px;text-align:center;"><option value="">Min</option><option>00</option><option>15</option><option>30</option><option>45</option></select>
+              <select id="dEndHr" onchange="calcPersonTime('d');saveSelects()" style="padding:10px 6px;font-size:14px;text-align:center;"><option value="">Hr</option></select>
+              <select id="dEndMin" onchange="calcPersonTime('d');saveSelects()" style="padding:10px 6px;font-size:14px;text-align:center;"><option value="">Min</option><option>00</option><option>15</option><option>30</option><option>45</option></select>
             </div></div>
             <div style="background:var(--cd);border:1px solid var(--br);border-radius:7px;padding:8px 10px;">
               <div style="font-size:9px;text-transform:uppercase;letter-spacing:1px;color:var(--mt);margin-bottom:2px;">Raw</div>
@@ -217,12 +209,12 @@ hr{border:none;border-top:1px solid var(--br);margin:10px 0;}
           </div>
           <div style="padding:10px;display:flex;flex-direction:column;gap:8px;">
             <div><label>Start</label><div style="display:grid;grid-template-columns:1fr 1fr;gap:5px;">
-              <select id="nStartHr" onchange="calcPersonTime('n')" style="padding:10px 6px;font-size:14px;text-align:center;"><option value="">Hr</option></select>
-              <select id="nStartMin" onchange="calcPersonTime('n')" style="padding:10px 6px;font-size:14px;text-align:center;"><option value="">Min</option><option>00</option><option>15</option><option>30</option><option>45</option></select>
+              <select id="nStartHr" onchange="calcPersonTime('n');saveSelects()" style="padding:10px 6px;font-size:14px;text-align:center;"><option value="">Hr</option></select>
+              <select id="nStartMin" onchange="calcPersonTime('n');saveSelects()" style="padding:10px 6px;font-size:14px;text-align:center;"><option value="">Min</option><option>00</option><option>15</option><option>30</option><option>45</option></select>
             </div></div>
             <div><label>End</label><div style="display:grid;grid-template-columns:1fr 1fr;gap:5px;">
-              <select id="nEndHr" onchange="calcPersonTime('n')" style="padding:10px 6px;font-size:14px;text-align:center;"><option value="">Hr</option></select>
-              <select id="nEndMin" onchange="calcPersonTime('n')" style="padding:10px 6px;font-size:14px;text-align:center;"><option value="">Min</option><option>00</option><option>15</option><option>30</option><option>45</option></select>
+              <select id="nEndHr" onchange="calcPersonTime('n');saveSelects()" style="padding:10px 6px;font-size:14px;text-align:center;"><option value="">Hr</option></select>
+              <select id="nEndMin" onchange="calcPersonTime('n');saveSelects()" style="padding:10px 6px;font-size:14px;text-align:center;"><option value="">Min</option><option>00</option><option>15</option><option>30</option><option>45</option></select>
             </div></div>
             <div style="background:var(--cd);border:1px solid var(--br);border-radius:7px;padding:8px 10px;">
               <div style="font-size:9px;text-transform:uppercase;letter-spacing:1px;color:var(--mt);margin-bottom:2px;">Raw</div>
@@ -241,7 +233,6 @@ hr{border:none;border-top:1px solid var(--br);margin:10px 0;}
   <div class="sec">
     <div class="sh" onclick="tog(this)"><span class="si">💼</span><span class="st">Jobs</span><span class="sbg or" id="jbdg">0 jobs</span><span class="chv">v</span></div>
     <div class="sb">
-      <!-- Running total bar -->
       <div class="jtotal" id="jtotalBar" style="display:none;">
         <div class="jtotal-cell">
           <div class="jtotal-lbl">Gross Revenue</div>
@@ -321,8 +312,6 @@ hr{border:none;border-top:1px solid var(--br);margin:10px 0;}
 
 <!-- PAGE 3: RESULTS -->
 <div class="pg" id="p3">
-
-  <!-- PS % badge strip at top -->
   <div class="ps-strip">
     <div>
       <div style="font-size:9px;text-transform:uppercase;letter-spacing:1.5px;color:var(--mt);font-weight:700;margin-bottom:2px;">Profit Share %</div>
@@ -333,8 +322,6 @@ hr{border:none;border-top:1px solid var(--br);margin:10px 0;}
       <div style="font-family:'Barlow Condensed',sans-serif;font-size:28px;font-weight:900;color:var(--yl);" id="dailyBdgBig">0%</div>
     </div>
   </div>
-
-  <!-- DAY TOTAL EARNED — promoted to top -->
   <div class="sec">
     <div class="sh" onclick="tog(this)"><span class="si">🏆</span><span class="st">Day Total Earned</span><span class="chv">v</span></div>
     <div class="sb">
@@ -355,8 +342,6 @@ hr{border:none;border-top:1px solid var(--br);margin:10px 0;}
       </div>
     </div>
   </div>
-
-  <!-- Profit Share Calc -->
   <div class="sec">
     <div class="sh" onclick="tog(this)"><span class="si">📊</span><span class="st">Profit Share Calc</span><span class="sbg yl" id="psBdg">0%</span><span class="chv">v</span></div>
     <div class="sb">
@@ -395,10 +380,9 @@ hr{border:none;border-top:1px solid var(--br);margin:10px 0;}
       </div>
       <div class="step">
         <div class="step-label"><span class="step-num">4</span>Profit Share Split</div>
-        <!-- Split selector -->
         <div style="display:flex;align-items:center;gap:10px;margin-bottom:12px;background:var(--cd);border:1px solid var(--br);border-radius:10px;padding:10px 12px;">
           <span style="font-size:9px;text-transform:uppercase;letter-spacing:1.5px;color:var(--mt);font-weight:700;white-space:nowrap;">Split Mode</span>
-          <select id="psSplitMode" onchange="calc()" style="font-size:14px;font-weight:700;padding:8px 10px;border-color:var(--or);color:var(--or);background:var(--sf);">
+          <select id="psSplitMode" onchange="calc();saveFields()" style="font-size:14px;font-weight:700;padding:8px 10px;border-color:var(--or);color:var(--or);background:var(--sf);">
             <option value="60-40">60 / 40 — Driver / Nav</option>
             <option value="50-50">50 / 50 — Equal Split</option>
           </select>
@@ -424,8 +408,6 @@ hr{border:none;border-top:1px solid var(--br);margin:10px 0;}
       </div>
     </div>
   </div>
-
-  <!-- Phase 1 -->
   <div class="sec">
     <div class="sh" onclick="tog(this)"><span class="si">💼</span><span class="st">Phase 1 · Base Wages</span><span class="chv">v</span></div>
     <div class="sb">
@@ -464,8 +446,6 @@ hr{border:none;border-top:1px solid var(--br);margin:10px 0;}
       </div>
     </div>
   </div>
-
-  <!-- Phase 3 -->
   <div class="sec">
     <div class="sh" onclick="tog(this)"><span class="si">💵</span><span class="st">Phase 3 · Total Hourly + Tips</span><span class="chv">v</span></div>
     <div class="sb">
@@ -507,7 +487,6 @@ hr{border:none;border-top:1px solid var(--br);margin:10px 0;}
       </div>
     </div>
   </div>
-
   <div class="brow">
     <button class="ba rs" onclick="resetAll()">New Day</button>
     <button class="ba or" onclick="window.print()">Print</button>
@@ -529,15 +508,15 @@ hr{border:none;border-top:1px solid var(--br);margin:10px 0;}
           <div>
             <div style="font-size:9px;text-transform:uppercase;letter-spacing:1.5px;color:var(--mt);font-weight:700;margin-bottom:8px;">Shift Start</div>
             <div style="display:grid;grid-template-columns:1fr 1fr;gap:5px;">
-              <select id="statsStartHr" onchange="calcStats()" style="padding:10px 4px;font-size:14px;text-align:center;"><option value="">Hr</option></select>
-              <select id="statsStartMin" onchange="calcStats()" style="padding:10px 4px;font-size:14px;text-align:center;"><option value="">Min</option><option>00</option><option>15</option><option>30</option><option>45</option></select>
+              <select id="statsStartHr" onchange="calcStats();saveSelects()" style="padding:10px 4px;font-size:14px;text-align:center;"><option value="">Hr</option></select>
+              <select id="statsStartMin" onchange="calcStats();saveSelects()" style="padding:10px 4px;font-size:14px;text-align:center;"><option value="">Min</option><option>00</option><option>15</option><option>30</option><option>45</option></select>
             </div>
           </div>
           <div>
             <div style="font-size:9px;text-transform:uppercase;letter-spacing:1.5px;color:var(--mt);font-weight:700;margin-bottom:8px;">Shift End</div>
             <div style="display:grid;grid-template-columns:1fr 1fr;gap:5px;">
-              <select id="statsEndHr" onchange="calcStats()" style="padding:10px 4px;font-size:14px;text-align:center;"><option value="">Hr</option></select>
-              <select id="statsEndMin" onchange="calcStats()" style="padding:10px 4px;font-size:14px;text-align:center;"><option value="">Min</option><option>00</option><option>15</option><option>30</option><option>45</option></select>
+              <select id="statsEndHr" onchange="calcStats();saveSelects()" style="padding:10px 4px;font-size:14px;text-align:center;"><option value="">Hr</option></select>
+              <select id="statsEndMin" onchange="calcStats();saveSelects()" style="padding:10px 4px;font-size:14px;text-align:center;"><option value="">Min</option><option>00</option><option>15</option><option>30</option><option>45</option></select>
             </div>
           </div>
         </div>
@@ -548,7 +527,6 @@ hr{border:none;border-top:1px solid var(--br);margin:10px 0;}
       </div>
     </div>
   </div>
-
   <div class="sec">
     <div class="sh" onclick="tog(this)"><span class="si">🏠</span><span class="st">Avg Job Size</span><span class="sbg or" id="avgJobBdg">—</span><span class="chv">v</span></div>
     <div class="sb">
@@ -566,7 +544,6 @@ hr{border:none;border-top:1px solid var(--br);margin:10px 0;}
       </div>
     </div>
   </div>
-
   <div class="sec">
     <div class="sh" onclick="tog(this)"><span class="si">🎯</span><span class="st">Pace Tracker</span><span class="chv">v</span></div>
     <div class="sb">
@@ -577,30 +554,29 @@ hr{border:none;border-top:1px solid var(--br);margin:10px 0;}
       </div>
       <div style="display:flex;align-items:center;gap:10px;">
         <label style="margin-bottom:0;white-space:nowrap;min-width:90px;">Daily Target ($)</label>
-        <input type="number" id="dailyTarget" value="2500" inputmode="decimal" step="100" oninput="calcStats()" style="font-size:15px;padding:10px 12px;">
+        <input type="number" id="dailyTarget" value="2500" inputmode="decimal" step="100" oninput="calcStats();saveFields();" style="font-size:15px;padding:10px 12px;">
       </div>
     </div>
   </div>
-
   <div class="sec">
     <div class="sh" onclick="tog(this)"><span class="si">📤</span><span class="st">End of Day Summary</span><span class="chv">v</span></div>
     <div class="sb">
       <p style="font-size:11px;color:var(--mt);margin-bottom:12px;line-height:1.5;">Fill in the fields below, then copy the message to send to your ops manager.</p>
       <div class="r2">
-        <div><label>Tomorrow Dump</label><input type="text" id="eodTomorrowDump" placeholder="Yes / No / TBD" oninput="buildSummary()"></div>
-        <div><label>Last Job End Time</label><input type="text" id="eodLastJobEnd" placeholder="e.g. 4:45pm" oninput="buildSummary()"></div>
+        <div><label>Tomorrow Dump</label><input type="text" id="eodTomorrowDump" placeholder="Yes / No / TBD" oninput="buildSummary();saveFields()"></div>
+        <div><label>Last Job End Time</label><input type="text" id="eodLastJobEnd" placeholder="e.g. 4:45pm" oninput="buildSummary();saveFields()"></div>
       </div>
       <div class="r2">
-        <div><label>Parked</label><input type="text" id="eodParked" placeholder="e.g. Depot" oninput="buildSummary()"></div>
-        <div><label>Nav Dropped Off</label><input type="text" id="eodNavDrop" placeholder="e.g. Home" oninput="buildSummary()"></div>
+        <div><label>Parked</label><input type="text" id="eodParked" placeholder="e.g. Depot" oninput="buildSummary();saveFields()"></div>
+        <div><label>Nav Dropped Off</label><input type="text" id="eodNavDrop" placeholder="e.g. Home" oninput="buildSummary();saveFields()"></div>
       </div>
       <div class="r2">
-        <div><label>Gas ($)</label><input type="number" id="eodGas" placeholder="0.00" inputmode="decimal" step="0.01" oninput="buildSummary()"></div>
-        <div><label>Lawn Signs</label><input type="text" id="eodSigns" placeholder="e.g. 3" oninput="buildSummary()"></div>
+        <div><label>Gas ($)</label><input type="number" id="eodGas" placeholder="0.00" inputmode="decimal" step="0.01" oninput="buildSummary();saveFields()"></div>
+        <div><label>Lawn Signs</label><input type="text" id="eodSigns" placeholder="e.g. 3" oninput="buildSummary();saveFields()"></div>
       </div>
       <div class="r2">
-        <div><label>Podiums Sent</label><input type="text" id="eodPodiums" placeholder="e.g. 2" oninput="buildSummary()"></div>
-        <div><label>Paperwork</label><input type="text" id="eodPaperwork" placeholder="auto-fills from Nav name" oninput="buildSummary()"></div>
+        <div><label>Podiums Sent</label><input type="text" id="eodPodiums" placeholder="e.g. 2" oninput="buildSummary();saveFields()"></div>
+        <div><label>Paperwork</label><input type="text" id="eodPaperwork" placeholder="auto-fills from Nav name" oninput="buildSummary();saveFields()"></div>
       </div>
       <div style="background:var(--ra);border:1px solid var(--br);border-radius:10px;padding:13px;margin-bottom:10px;font-family:monospace;font-size:13px;line-height:1.9;color:var(--tx);white-space:pre-wrap;word-break:break-word;" id="summaryPreview">Fill in the fields above...</div>
       <button class="ba or" style="width:100%;font-size:16px;" onclick="copySummary()">📋 Copy Message</button>
@@ -611,11 +587,98 @@ hr{border:none;border-top:1px solid var(--br);margin:10px 0;}
 <div class="toast" id="toast"></div>
 
 <script>
+// ─────────────────────────────────────────────
+//  STATE
+// ─────────────────────────────────────────────
 var jobs=[], jid=0, dumps=[], did=0, divs=[], vid=0;
+var STORAGE_KEY = 'ttm_journal_v1';
 
+// ─────────────────────────────────────────────
+//  PERSIST: save everything to window.storage
+// ─────────────────────────────────────────────
+var _saveTimer = null;
+function scheduleSave(){
+  if(_saveTimer) clearTimeout(_saveTimer);
+  _saveTimer = setTimeout(persistSave, 400);
+}
+
+async function persistSave(){
+  // Collect all text/number/select field values
+  var fieldIds = [
+    'truckNum','jdate','driverName','navName',
+    'driverHrs','navHrs','driverRate','navRate',
+    'psSplitMode','dailyTarget',
+    'eodTomorrowDump','eodLastJobEnd','eodParked','eodNavDrop',
+    'eodGas','eodSigns','eodPodiums','eodPaperwork'
+  ];
+  var selectIds = [
+    'dStartHr','dStartMin','dEndHr','dEndMin',
+    'nStartHr','nStartMin','nEndHr','nEndMin',
+    'statsStartHr','statsStartMin','statsEndHr','statsEndMin'
+  ];
+  var fields = {};
+  fieldIds.forEach(function(id){
+    var el = document.getElementById(id);
+    if(el) fields[id] = el.value;
+  });
+  selectIds.forEach(function(id){
+    var el = document.getElementById(id);
+    if(el) fields[id] = el.value;
+  });
+
+  var data = {
+    jobs: jobs, jid: jid,
+    dumps: dumps, did: did,
+    divs: divs, vid: vid,
+    fields: fields,
+    savedAt: Date.now()
+  };
+
+  try {
+    await window.storage.set(STORAGE_KEY, JSON.stringify(data));
+  } catch(e) {
+    console.warn('Storage save failed:', e);
+  }
+}
+
+// ─────────────────────────────────────────────
+//  RESTORE: load from window.storage on startup
+// ─────────────────────────────────────────────
+async function persistLoad(){
+  try {
+    var result = await window.storage.get(STORAGE_KEY);
+    if(!result || !result.value) return false;
+    var data = JSON.parse(result.value);
+
+    // Restore arrays and counters
+    if(data.jobs)  { jobs  = data.jobs;  jid  = data.jid  || 0; }
+    if(data.dumps) { dumps = data.dumps; did  = data.did  || 0; }
+    if(data.divs)  { divs  = data.divs;  vid  = data.vid  || 0; }
+
+    // Restore field values
+    if(data.fields){
+      Object.keys(data.fields).forEach(function(id){
+        var el = document.getElementById(id);
+        if(el) el.value = data.fields[id];
+      });
+    }
+
+    return true;
+  } catch(e) {
+    console.warn('Storage load failed:', e);
+    return false;
+  }
+}
+
+// Trigger save on any relevant input
+function saveFields(){ scheduleSave(); }
+function saveSelects(){ scheduleSave(); }
+
+// ─────────────────────────────────────────────
+//  INIT
+// ─────────────────────────────────────────────
 var td=new Date();
 document.getElementById('hdt').innerHTML=td.toLocaleDateString('en-US',{weekday:'short'})+'<br>'+td.toLocaleDateString('en-US',{month:'short',day:'numeric'});
-document.getElementById('jdate').value=td.toISOString().split('T')[0];
 
 // Build hour dropdowns 5am-11pm
 (function(){
@@ -630,6 +693,25 @@ document.getElementById('jdate').value=td.toISOString().split('T')[0];
   });
 })();
 
+// Load saved data, then render
+(async function(){
+  var restored = await persistLoad();
+  // Only set default date if no saved date
+  if(!document.getElementById('jdate').value){
+    document.getElementById('jdate').value = td.toISOString().split('T')[0];
+  }
+  renderJobs();
+  renderDumps();
+  renderDivs();
+  calc();
+  if(restored && (jobs.length || dumps.length || divs.length)){
+    showToast('📂 Data restored (' + jobs.length + ' job' + (jobs.length!==1?'s':'') + ')');
+  }
+})();
+
+// ─────────────────────────────────────────────
+//  UI HELPERS
+// ─────────────────────────────────────────────
 function gTab(i){
   document.querySelectorAll('.tab').forEach(function(t,j){t.classList.toggle('on',i===j);});
   document.querySelectorAll('.pg').forEach(function(p,j){p.classList.toggle('on',i===j);});
@@ -661,22 +743,24 @@ function applyPersonTime(who){
   var h=calcPersonTime(who);
   if(!h){showToast('Select start & end times first');return;}
   document.getElementById(who==='d'?'driverHrs':'navHrs').value=h;
-  calc();showToast((who==='d'?'Driver':'Nav')+' hours set: '+h+'h');
+  calc();saveFields();showToast((who==='d'?'Driver':'Nav')+' hours set: '+h+'h');
 }
 function applyBothTimes(){
   var dh=calcPersonTime('d'),nh=calcPersonTime('n'),applied=[];
   if(dh){document.getElementById('driverHrs').value=dh;applied.push('Driver '+dh+'h');}
   if(nh){document.getElementById('navHrs').value=nh;applied.push('Nav '+nh+'h');}
   if(!applied.length){showToast('Select times for at least one person');return;}
-  calc();showToast('Applied: '+applied.join(' · '));
+  calc();saveFields();showToast('Applied: '+applied.join(' · '));
 }
 
-// JOBS
+// ─────────────────────────────────────────────
+//  JOBS
+// ─────────────────────────────────────────────
 function addJob(){
   var id=++jid;
   jobs.push({id:id,amount:0,tip:0,type:'r'});
   renderJobs();
-  // Auto-focus the amount field on new card — change #13
+  scheduleSave();
   setTimeout(function(){
     var card=document.getElementById('jc-'+id);
     if(card){
@@ -686,7 +770,7 @@ function addJob(){
     }
   },80);
 }
-function removeJob(id){jobs=jobs.filter(function(j){return j.id!==id;});renderJobs();}
+function removeJob(id){jobs=jobs.filter(function(j){return j.id!==id;});renderJobs();scheduleSave();}
 function setJobType(id,t){
   var j=jobs.find(function(x){return x.id===id;});if(!j)return;
   j.type=t;
@@ -696,7 +780,7 @@ function setJobType(id,t){
     card.querySelectorAll('.jtype-btn')[1].className='jtype-btn'+(t==='c'?' active-c':'');
     card.querySelector('.jadr').textContent=(t==='r'?'🏠 Residential':'🏢 Commercial');
   }
-  calc();
+  calc();scheduleSave();
 }
 function renderJobs(){
   var cont=document.getElementById('jcont');cont.innerHTML='';
@@ -707,7 +791,6 @@ function renderJobs(){
     calc();return;
   }
   if(bar)bar.style.display='grid';
-  // #3: re-number correctly on every render
   jobs.forEach(function(j,idx){
     var lt=(j.amount||0)+(j.tip||0),t=j.type||'r';
     var div=document.createElement('div');div.className='jcard';div.id='jc-'+j.id;
@@ -734,25 +817,25 @@ function sj(id,f,v){
   j[f]=v;
   var card=document.getElementById('jc-'+id);
   if(card)card.querySelector('.jlt').textContent=((j.amount||0)+(j.tip||0))>0?fmt((j.amount||0)+(j.tip||0)):'—';
-  calc();
+  calc();scheduleSave();
 }
 
-// DUMP STOPS
+// ─────────────────────────────────────────────
+//  DUMP STOPS
+// ─────────────────────────────────────────────
 function addDump(){
   var id=++did;
   dumps.push({id:id,site:'',rate:0,weight:0,cost:0});
-  renderDumps();
+  renderDumps();scheduleSave();
   setTimeout(function(){var el=document.getElementById('dc-'+id);if(el)el.scrollIntoView({behavior:'smooth',block:'center'});},60);
 }
-function removeDump(id){dumps=dumps.filter(function(d){return d.id!==id;});renderDumps();}
+function removeDump(id){dumps=dumps.filter(function(d){return d.id!==id;});renderDumps();scheduleSave();}
 function renderDumps(){
   var cont=document.getElementById('dumpCont');cont.innerHTML='';
   if(!dumps.length){
     cont.innerHTML='<div class="empty"><div class="empty-icon">🏭</div><div class="empty-txt">No dump stops yet.<br>Tap <strong>+ Add Dump Stop</strong> below.</div></div>';
     calc();return;
   }
-  // #4: badge shows stop count only, not cost
-  var totalD=dumps.reduce(function(s,d){return s+(d.cost||0);},0);
   st('dumpBadge',dumps.length+' stop'+(dumps.length!==1?'s':''));
   dumps.forEach(function(d,idx){
     var div=document.createElement('div');div.className='dcard';div.id='dc-'+d.id;
@@ -783,15 +866,17 @@ function sd(id,f,v){
   var calcEl=document.getElementById('dcalc-'+id);if(calcEl)calcEl.textContent=d.cost>0?fmt(d.cost):'$0.00';
   var card=document.getElementById('dc-'+id);
   if(card){if(f==='site')card.querySelector('.dsite').textContent=v||'Dump Stop';card.querySelector('.dcost').textContent=d.cost>0?fmt(d.cost):'—';}
-  calc();
+  calc();scheduleSave();
 }
 
-// DIVERSION STOPS
+// ─────────────────────────────────────────────
+//  DIVERSION STOPS
+// ─────────────────────────────────────────────
 function addDiv(){
-  var id=++vid;divs.push({id:id,site:'',amount:0});renderDivs();
+  var id=++vid;divs.push({id:id,site:'',amount:0});renderDivs();scheduleSave();
   setTimeout(function(){var el=document.getElementById('vc-'+id);if(el)el.scrollIntoView({behavior:'smooth',block:'center'});},60);
 }
-function removeDiv(id){divs=divs.filter(function(v){return v.id!==id;});renderDivs();}
+function removeDiv(id){divs=divs.filter(function(v){return v.id!==id;});renderDivs();scheduleSave();}
 function renderDivs(){
   var cont=document.getElementById('divCont');cont.innerHTML='';
   var badge=document.getElementById('divCountBadge');
@@ -819,10 +904,12 @@ function sv(id,f,v){
   var d=divs.find(function(x){return x.id===id;});if(!d)return;d[f]=v;
   var card=document.getElementById('vc-'+id);
   if(card){if(f==='site')card.querySelector('.vsite').textContent=v||'Diversion Stop';if(f==='amount')card.querySelector('.vsave').textContent=v>0?fmt(v):'—';}
-  calc();
+  calc();scheduleSave();
 }
 
-// MASTER CALC — raw dailyPct used for all math, display rounds separately (#1 fix)
+// ─────────────────────────────────────────────
+//  MASTER CALC
+// ─────────────────────────────────────────────
 function calc(){
   var grossRev  = jobs.reduce(function(s,j){return s+(j.amount||0);},0);
   var totalTips = jobs.reduce(function(s,j){return s+(j.tip||0);},0);
@@ -835,9 +922,8 @@ function calc(){
   var effectiveDump=Math.max(0,totalDump-totalDiv);
   var netRev=grossRev-totalBase-effectiveDump;
 
-  // #1: raw dailyPct for all math, rounded only for display
   var dailyPct=grossRev>0?(netRev/grossRev)*100:0;
-  var psPct=Math.max(0,(dailyPct-62)*0.2+2);  // uses raw, unrounded dailyPct
+  var psPct=Math.max(0,(dailyPct-62)*0.2+2);
   var dailyPctDisplay=Math.round(dailyPct);
 
   var totalPS=grossRev*(psPct/100);
@@ -854,10 +940,8 @@ function calc(){
   var dDayEarned=(dTotHr!==null&&dHrs>0)?dTotHr*dHrs:null;
   var nDayEarned=(nTotHr!==null&&nHrs>0)?nTotHr*nHrs:null;
 
-  // Live bar (#10: Sales/hr in bar)
   ['lG','lN','lD','lJobs','lSph'].forEach(function(id){var el=document.getElementById(id);if(el){el.classList.remove('bump');void el.offsetWidth;el.classList.add('bump');}});
   st('lG',fmtS(grossRev));st('lN',fmtS(netRev));st('lD',dailyPctDisplay+'%');st('lJobs',jobs.length);
-  // Sales/hr for live bar — computed from stats start time
   var nowM=new Date();var nowMins=nowM.getHours()*60+nowM.getMinutes();
   var startM=getSelMins('statsStartHr','statsStartMin');
   var endM=getSelMins('statsEndHr','statsEndMin');
@@ -865,28 +949,22 @@ function calc(){
   var sphLive=(startM!==null&&startM<refM&&(refM-startM)>0)?grossRev/((refM-startM)/60):null;
   st('lSph',sphLive!==null?fmtS(sphLive)+'/h':'—');
 
-  // #2: running total bar on Jobs tab
   st('jGrossDisp',fmt(grossRev));st('jTipsDisp',fmt(totalTips));
   st('jbdg',jobs.length+(jobs.length===1?' job':' jobs'));
-
-  // Dump badge — just count (#4)
   st('dumpBadge',dumps.length+' stop'+(dumps.length!==1?'s':''));
   st('sumDump',fmt(totalDump));st('sumDiv',fmt(totalDiv));st('sumDisp',fmt(Math.max(0,totalDump-totalDiv)));
   var nd=document.getElementById('sumDisp');if(nd)nd.className='iv '+(totalDiv>0?'gr':'rd');
 
-  // Hours
   document.getElementById('totBase').value=fmt(totalBase);
   st('tipsBadge',fmtS(totalTips));st('tipsPool',fmt(totalTips));
 
-  // #7: PS % badge prominently on Results
   st('psBdg',psPct.toFixed(2)+'%');
   st('psBdgBig',psPct.toFixed(2)+'%');
   st('dailyBdgBig',dailyPctDisplay+'%');
 
-  // Steps — display rounds dailyPct, but s3a uses raw for formula display
   st('s1a',fmt(grossRev));st('s1b',fmt(totalBase));st('s1c',fmt(totalDump));st('s1d',fmt(totalDiv));st('s1e',fmt(netRev));
   st('s2a',fmt(netRev));st('s2b',fmt(grossRev));st('s2c',dailyPctDisplay+'%');
-  st('s3a',dailyPct.toFixed(1));st('s3b',psPct.toFixed(2)+'%');  // show 1dp in formula for transparency
+  st('s3a',dailyPct.toFixed(1));st('s3b',psPct.toFixed(2)+'%');
   st('s4a',psPct.toFixed(2)+'%');st('s4b',fmt(grossRev));st('s4c',fmt(totalPS));
   var drPctLabel='× '+(dSplit*100).toFixed(0)+'% =';
   var nvPctLabel='× '+(nSplit*100).toFixed(0)+'% =';
@@ -901,7 +979,6 @@ function calc(){
   st('dLbl3',dn);st('nLbl3',nn);
   st('navTimeLabel',nn);
 
-  // Phase 1
   st('d_hrs',dHrs);st('d_rate',dRate.toFixed(2));st('d_base',fmt(dBase));st('d_ps',fmt(dPS));st('d_earn',fmt(dEarn));
   st('d_ehrs',dHrs>0?dHrs+'h':'—');st('d_pretip',dPretip!==null?fmtH(dPretip):'—');st('dBdg',fmtS(dEarn));
   topupWarn('d_warn',dPretip,20.00);
@@ -909,23 +986,24 @@ function calc(){
   st('n_ehrs',nHrs>0?nHrs+'h':'—');st('n_pretip',nPretip!==null?fmtH(nPretip):'—');st('nBdg',fmtS(nEarn));
   topupWarn('n_warn',nPretip,18.00);
 
-  // Phase 3
   st('p3TipsTotal',fmt(totalTips));st('p3TipsSplit',fmt(dTipShare));
   st('d_tips2',fmt(dTipShare));st('d_thrs',dHrs>0?dHrs+'h':'—');st('d_tiphr',dTipHr!==null?fmtH(dTipHr):'—');
   st('d_pretip2',dPretip!==null?fmtH(dPretip):'—');st('d_tothr',dTotHr!==null?fmtH(dTotHr):'—');st('dFinalBdg',dTotHr!==null?fmtH(dTotHr):'—/hr');
   st('n_tips2',fmt(nTipShare));st('n_thrs',nHrs>0?nHrs+'h':'—');st('n_tiphr',nTipHr!==null?fmtH(nTipHr):'—');
   st('n_pretip2',nPretip!==null?fmtH(nPretip):'—');st('n_tothr',nTotHr!==null?fmtH(nTotHr):'—');st('nFinalBdg',nTotHr!==null?fmtH(nTotHr):'—/hr');
 
-  // #6: Day Total Earned at top of Results
   st('d_dayearned',dDayEarned!==null?fmt(dDayEarned):'—');
   st('d_dayearnedSub',dTotHr!==null&&dHrs>0?fmtH(dTotHr)+' × '+dHrs+'h':'enter hours');
   st('n_dayearned',nDayEarned!==null?fmt(nDayEarned):'—');
   st('n_dayearnedSub',nTotHr!==null&&nHrs>0?fmtH(nTotHr)+' × '+nHrs+'h':'enter hours');
 
+  scheduleSave();
   calcStats();
 }
 
-// STATS
+// ─────────────────────────────────────────────
+//  STATS
+// ─────────────────────────────────────────────
 function calcStats(){
   var grossRev=jobs.reduce(function(s,j){return s+(j.amount||0);},0);
   var resJobs=jobs.filter(function(j){return(j.type||'r')==='r';});
@@ -979,17 +1057,18 @@ function calcStats(){
 
 setInterval(calcStats,60000);
 
-// #1: Use driver start time
 function useDriverStartTime(){
   var h=document.getElementById('dStartHr').value;
   var m=document.getElementById('dStartMin').value;
   if(!h||m===''){showToast('Set Driver start time on the Jobs tab first');return;}
   document.getElementById('statsStartHr').value=h;
   document.getElementById('statsStartMin').value=m;
-  calcStats();showToast('Shift start synced from Driver time');
+  calcStats();saveSelects();showToast('Shift start synced from Driver time');
 }
 
-// EOD SUMMARY — #8: auto-pulls nav name for paperwork
+// ─────────────────────────────────────────────
+//  EOD SUMMARY
+// ─────────────────────────────────────────────
 function buildSummary(){
   var grossRev=jobs.reduce(function(s,j){return s+(j.amount||0);},0);
   var totalDump=dumps.reduce(function(s,d){return s+(d.cost||0);},0);
@@ -1002,7 +1081,6 @@ function buildSummary(){
   var gas=gi('eodGas')?'$'+parseFloat(gi('eodGas')).toFixed(2):'___';
   var signs=gi('eodSigns')||'___';
   var podiums=gi('eodPodiums')||'___';
-  // #8: paperwork field defaults to nav name if field is empty
   var paperwork=gi('eodPaperwork')||(nn||'___');
   var msg=
     'Jobs completed: '+jobs.length+'\n'+
@@ -1022,7 +1100,6 @@ function buildSummary(){
   var el=document.getElementById('summaryPreview');if(el)el.textContent=msg;
 }
 
-// #9: Copy with toast showing first line
 function copySummary(){
   var el=document.getElementById('summaryPreview');if(!el)return;
   var txt=el.textContent;
@@ -1055,6 +1132,9 @@ function fmtH(n){return '$'+(n||0).toFixed(2)+'/hr';}
 function esc(s){return(s||'').replace(/"/g,'&quot;');}
 function showToast(msg){var t=document.getElementById('toast');t.textContent=msg;t.classList.add('show');setTimeout(function(){t.classList.remove('show');},2800);}
 
+// ─────────────────────────────────────────────
+//  RESET
+// ─────────────────────────────────────────────
 function resetAll(){
   if(!confirm('Start a new day? All data will be cleared.'))return;
   jobs=[];jid=0;dumps=[];did=0;divs=[];vid=0;
@@ -1068,17 +1148,18 @@ function resetAll(){
   st('dTimeRaw','—');st('dTimeRounded','—');st('dHrsBadge','—');
   st('nTimeRaw','—');st('nTimeRounded','—');st('nHrsBadge','—');
   document.getElementById('jtotalBar').style.display='none';
-  renderJobs();renderDivs();calc();showToast('Ready for a new day! 🚛');
+  renderJobs();renderDivs();calc();
+  // Clear persisted data
+  try{ window.storage.delete(STORAGE_KEY); }catch(e){}
+  showToast('Ready for a new day! 🚛');
 }
 
 document.addEventListener('input',function(e){
-  if(['driverName','navName','driverHrs','navHrs','driverRate','navRate'].indexOf(e.target.id)>-1)calc();
+  if(['driverName','navName','driverHrs','navHrs','driverRate','navRate'].indexOf(e.target.id)>-1){
+    calc();scheduleSave();
+  }
 });
 
-renderJobs();renderDivs();calc();
-
-// Register service worker for PWA offline support
-// Uses relative path so it works on GitHub Pages subdirectories
 if('serviceWorker' in navigator) {
   window.addEventListener('load', function() {
     navigator.serviceWorker.register('./sw.js', {scope: './'}).catch(function(e) {
